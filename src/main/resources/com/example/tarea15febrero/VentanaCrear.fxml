@@ -15,142 +15,137 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-          prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="com.example.tarea15febrero.AppController">
+<GridPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea15febrero.AppController">
     <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="395.0"/>
-        <ColumnConstraints hgrow="SOMETIMES" maxWidth="405.0" minWidth="10.0" prefWidth="405.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="395.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="405.0" minWidth="10.0" prefWidth="405.0" />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints maxHeight="156.0" minHeight="5.0" prefHeight="41.0" vgrow="SOMETIMES"/>
-        <RowConstraints maxHeight="445.0" minHeight="10.0" prefHeight="259.0" vgrow="SOMETIMES"/>
-        <RowConstraints maxHeight="313.0" minHeight="10.0" prefHeight="293.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="156.0" minHeight="5.0" prefHeight="41.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="445.0" minHeight="10.0" prefHeight="259.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="313.0" minHeight="10.0" prefHeight="293.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="    TO DO LIST JAVAFX" wrappingWidth="801.0"
-              GridPane.columnSpan="2">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="     LISTA DE TAREAS" wrappingWidth="801.0" GridPane.columnSpan="2">
             <font>
-                <Font name="FreeMono Bold" size="55.0"/>
+                <Font name="FreeMono Bold" size="55.0" />
             </font>
         </Text>
-        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1" GridPane.rowSpan="2">
+        <VBox fx:id="vBoxTarea" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1" GridPane.rowSpan="2">
             <children>
                 <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../../../../CiudadEnElCielo.jpg"/>
+                        <Image url="@../../../../../../../../../CiudadEnElCielo.jpg" />
                     </image>
                 </ImageView>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MOSTRAR TAREAS">
                     <font>
-                        <Font name="FreeMono Bold" size="13.0"/>
+                        <Font name="FreeMono Bold" size="13.0" />
                     </font>
                     <GridPane.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </GridPane.margin>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                 </Text>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                     <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Titulo">
                             <HBox.margin>
-                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                             </HBox.margin>
                         </Text>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion">
                             <HBox.margin>
-                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                             </HBox.margin>
                         </Text>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Acciones">
                             <HBox.margin>
-                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                             </HBox.margin>
                         </Text>
                     </children>
                 </HBox>
             </children>
         </VBox>
-        <VBox fx:id="entrada" alignment="TOP_CENTER" prefHeight="246.0" prefWidth="384.0" GridPane.columnIndex="1"
-              GridPane.rowIndex="1">
+        <VBox fx:id="entrada" alignment="TOP_CENTER" prefHeight="246.0" prefWidth="384.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <children>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CREAR TAREA">
                     <font>
-                        <Font name="System Bold" size="13.0"/>
+                        <Font name="System Bold" size="13.0" />
                     </font>
                 </Text>
                 <HBox alignment="TOP_RIGHT" prefHeight="31.0" prefWidth="309.0">
                     <children>
-                        <Label text="Titulo:"/>
-                        <TextField alignment="TOP_RIGHT" prefHeight="24.0" prefWidth="276.0">
+                        <Label text="Titulo:" />
+                        <TextField fx:id="nuevoTituloTarea" alignment="TOP_RIGHT" prefHeight="24.0" prefWidth="276.0">
                             <HBox.margin>
-                                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0"/>
+                                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                             </HBox.margin>
                         </TextField>
                     </children>
                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </VBox.margin>
                 </HBox>
                 <HBox alignment="TOP_RIGHT" prefHeight="136.0" prefWidth="375.0">
                     <children>
-                        <Label text="Descipcion: "/>
-                        <TextArea prefHeight="113.0" prefWidth="255.0">
+                        <Label text="Descipcion: " />
+                        <TextArea fx:id="nuevaDescripcionTarea" prefHeight="113.0" prefWidth="255.0">
                             <HBox.margin>
-                                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0"/>
+                                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                             </HBox.margin>
                         </TextArea>
                     </children>
                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </VBox.margin>
                 </HBox>
-                <Button fx:id="botonAñadir" mnemonicParsing="false" text="Crear">
+                <Button mnemonicParsing="false" onAction="#botonCrear" text="Crear">
                     <VBox.margin>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                     </VBox.margin>
                 </Button>
             </children>
             <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
         </VBox>
-        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1"
-              GridPane.rowIndex="2">
+        <VBox fx:id="modificar" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <children>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFICAR">
                     <font>
-                        <Font name="System Bold" size="13.0"/>
+                        <Font name="System Bold" size="13.0" />
                     </font>
                 </Text>
                 <HBox alignment="TOP_RIGHT" prefHeight="47.0" prefWidth="405.0">
                     <children>
-                        <Label text="Titulo:"/>
-                        <TextField prefHeight="24.0" prefWidth="287.0">
+                        <Label text="Titulo:" />
+                        <TextField fx:id="tituloEdit" prefHeight="24.0" prefWidth="287.0">
                             <HBox.margin>
-                                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0"/>
+                                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                             </HBox.margin>
                         </TextField>
                     </children>
                 </HBox>
                 <HBox alignment="TOP_RIGHT" prefHeight="124.0" prefWidth="383.0">
                     <children>
-                        <Label text="Descripcion"/>
-                        <TextArea prefHeight="90.0" prefWidth="266.0">
+                        <Label text="Descripcion" />
+                        <TextArea fx:id="descEdit" prefHeight="90.0" prefWidth="266.0">
                             <HBox.margin>
-                                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0"/>
+                                <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
                             </HBox.margin>
                         </TextArea>
                     </children>
                 </HBox>
-                <Button fx:id="botonModificar" mnemonicParsing="false" text="Modificar">
+                <Button mnemonicParsing="false" text="Modificar">
                     <VBox.margin>
-                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                     </VBox.margin>
                 </Button>
             </children>
             <padding>
-                <Insets bottom="11.0" left="11.0" right="11.0" top="11.0"/>
+                <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
             </padding>
         </VBox>
     </children>
