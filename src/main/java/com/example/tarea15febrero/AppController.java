@@ -62,6 +62,7 @@ public class AppController {
             vBoxTarea.setDisable(true);
             Text refModificarTitulo = titulo;
             Text refModDesc = desc;
+            // Borramos la tarea, se queda el texto anterior en la modificacion para no perderla
             Parent hbox1 = botonBorrar.getParent();
             Parent vbox = botonBorrar.getParent().getParent();
             var titulo3 = (Text) ((HBox)hbox1).getChildren().get(0);
@@ -111,12 +112,12 @@ public class AppController {
             vBoxTarea.setDisable(true);
             Text refModificarTitulo = titulo1;
             Text refModDesc = desc;
+            // Borramos la tarea, se queda el texto anterior en la modificacion para no perderla
             Parent hbox1 = botonBorrar.getParent();
             Parent vbox = botonBorrar.getParent().getParent();
             var titulo3 = (Text) ((HBox)hbox1).getChildren().get(0);
             //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
             ((VBox) vbox).getChildren().remove(hbox1);
-
         });
 
 

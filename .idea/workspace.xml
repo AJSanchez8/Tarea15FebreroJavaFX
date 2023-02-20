@@ -5,16 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d24ca2-8699-4614-a6b3-05ac056cd5e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/Modelo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="AJSanchez" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -76,12 +89,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676538880916</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Boton modificar medio funcional">
+      <created>1676886189892</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676886189892</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Boton modificar funcional 100%">
+      <created>1676886422935</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676886422935</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cambio de variables para que modificar tenga mismo tituto y descripcion" />
     <MESSAGE value="Cambio sceneBuilder para ocultar modificar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambio sceneBuilder para ocultar modificar" />
+    <MESSAGE value="Boton modificar medio funcional" />
+    <MESSAGE value="Boton modificar funcional 100%" />
+    <option name="LAST_COMMIT_MESSAGE" value="Boton modificar funcional 100%" />
   </component>
 </project>

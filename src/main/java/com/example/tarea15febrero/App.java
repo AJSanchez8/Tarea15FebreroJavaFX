@@ -13,7 +13,7 @@ public class App extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("VentanaCrear.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setTitle("Adios");
+        stage.setTitle("LISTA DE TAREAS");
         stage.setScene(scene);
         stage.show();
 
