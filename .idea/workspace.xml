@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55d24ca2-8699-4614-a6b3-05ac056cd5e7" name="Changes" comment="Creamos properties para almacenar datos">
+    <list default="true" id="55d24ca2-8699-4614-a6b3-05ac056cd5e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/memorycard.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +68,11 @@
     "last_opened_file_path": "/home/usuario/AJDAW/programacion/proyectos intelliJ/Tarea15Febrero"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -108,8 +117,26 @@
       <option name="project" value="LOCAL" />
       <updated>1676886988675</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creamos properties y lo implementamos">
+      <created>1676889490052</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676889490052</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cambio de variables para que modificar tenga mismo tituto y descripcion" />
@@ -117,6 +144,7 @@
     <MESSAGE value="Boton modificar medio funcional" />
     <MESSAGE value="Boton modificar funcional 100%" />
     <MESSAGE value="Creamos properties para almacenar datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creamos properties para almacenar datos" />
+    <MESSAGE value="Creamos properties y lo implementamos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creamos properties y lo implementamos" />
   </component>
 </project>

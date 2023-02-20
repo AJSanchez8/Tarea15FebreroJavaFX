@@ -8,6 +8,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class App extends Application {
+
+
+    // public static Modelo tareas = new Modelo("./src/main/resources/com/example/tarea15febrero/memorycard.txt");
     @Override
     public void start(Stage stage) throws IOException {
 
@@ -16,6 +19,7 @@ public class App extends Application {
         stage.setTitle("LISTA DE TAREAS");
         stage.setScene(scene);
         stage.show();
+
 
 
     }

@@ -38,7 +38,10 @@ public class AppController {
         elementosFila.add(titulo);
         var descripcion = new Text(nuevaDescripcionTarea.getText());
         elementosFila.add(descripcion);
-        cajon.crearTarea(titulo.getText(),descripcion.getText());
+        nuevoTituloTarea.clear();
+        nuevaDescripcionTarea.clear();
+       // cajon.crearTarea(titulo.getText(),descripcion.getText());
+       // cajon.almacenar();
         var elementosContenedor = vBoxTarea.getChildren();
         fila.setSpacing(5);
         var botonBorrar = new Button("Borrar");

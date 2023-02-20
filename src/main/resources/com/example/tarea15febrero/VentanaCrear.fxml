@@ -35,7 +35,7 @@
             <children>
                 <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../../../../CiudadEnElCielo.jpg" />
+                        <Image url="@CiudadEnElCielo.jpg" />
                     </image>
                 </ImageView>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MOSTRAR TAREAS">

@@ -1,27 +1,84 @@
 package com.example.tarea15febrero;
 
+import javafx.fxml.Initializable;
+
+import java.io.*;
+import java.net.URL;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
-public class Modelo {
+public class Modelo implements Initializable {
 
-    private Properties tarea;
+    private FileOutputStream fos;
+    private FileInputStream fis;
+    private String filepath = "./src/main/resources/com/example/tarea15febrero/memorycard.txt";
+    private Properties lista;
 
     //Contructor tarea
     public Modelo() {
-        tarea = new Properties();
+        lista = new Properties();
     }
 
-    public void crearTarea(String titulo, String descripcion){
-        tarea.setProperty(titulo, descripcion);
-    }
-    public void borrarTarea(String titulo){
-        tarea.remove(titulo);
-    }
-    public void modificarTarea(String titulo, String descripcion){
-        tarea.remove(titulo);
-        tarea.setProperty(titulo, descripcion);
+    public void crearTarea(String titulo, String descripcion) {
+        lista.setProperty(titulo, descripcion);
     }
 
+    public void borrarTarea(String titulo) {
+        lista.remove(titulo);
+    }
 
+    public void modificarTarea(String titulo, String descripcion) {
+        lista.remove(titulo);
+        lista.setProperty(titulo, descripcion);
+    }
 
+    public void almacenar() {
+        try {
+            fos = new FileOutputStream(filepath);
+            lista.store(fos, "Tareas pendientes");
+            fos.close();
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Modelo{tarea=" + lista + '}';
+    }
+    public boolean cargarTareasArchivo () throws IOException{
+        File archivo = new File(filepath);
+        boolean existe = false;
+        if ( archivo.exists() && archivo.isFile()){
+            fis = new FileInputStream(filepath);
+            lista.load(fis);
+            existe = true;
+        } else System.out.println("¡NO HAY ARCHIVO DE TAREAS!");
+        return existe;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        /*
+       try{
+            // Leemos las tareas del archivo
+            boolean hayTareas = App.tareas.cargarTareasArchivo();
+            if (hayTareas){
+                Iterator<String> it = App.tareas.devuelveIteradorClaves();
+
+                //Recorremos el iterador de las claves para obtener los valores de ir creando filas con ambos valores
+                while (it.hasNext()) {
+                    String k = it.next();
+                    String d = App.tareas.getValor(k); //Gestion tarea modelo
+                    crearTarea(k, d); //Gestion tarea vista
+                }
+
+            }
+        } catch (IOException e){
+            throw new RuntimeException(e);
+        }
+
+         */
+
+    }
 }
