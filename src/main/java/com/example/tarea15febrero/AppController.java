@@ -26,15 +26,19 @@ public class AppController {
 
     @FXML
     private TextArea descEdit;
+
+    private  Modelo cajon;
     @FXML
     protected void botonCrear() {
 
         var fila = new HBox();
         var elementosFila = fila.getChildren();
         var titulo = new Text(nuevoTituloTarea.getText());
+
         elementosFila.add(titulo);
         var descripcion = new Text(nuevaDescripcionTarea.getText());
         elementosFila.add(descripcion);
+        cajon.crearTarea(titulo.getText(),descripcion.getText());
         var elementosContenedor = vBoxTarea.getChildren();
         fila.setSpacing(5);
         var botonBorrar = new Button("Borrar");

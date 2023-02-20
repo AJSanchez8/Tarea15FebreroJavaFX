@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55d24ca2-8699-4614-a6b3-05ac056cd5e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/Modelo.java" afterDir="false" />
+    <list default="true" id="55d24ca2-8699-4614-a6b3-05ac056cd5e7" name="Changes" comment="Creamos properties para almacenar datos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676886422935</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Creamos properties para almacenar datos">
+      <created>1676886988675</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676886988675</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -111,6 +116,7 @@
     <MESSAGE value="Cambio sceneBuilder para ocultar modificar" />
     <MESSAGE value="Boton modificar medio funcional" />
     <MESSAGE value="Boton modificar funcional 100%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Boton modificar funcional 100%" />
+    <MESSAGE value="Creamos properties para almacenar datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creamos properties para almacenar datos" />
   </component>
 </project>
