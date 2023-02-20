@@ -36,12 +36,11 @@ public class AppController {
         var descripcion = new Text(nuevaDescripcionTarea.getText());
         elementosFila.add(descripcion);
         var elementosContenedor = vBoxTarea.getChildren();
-
         fila.setSpacing(5);
         var botonBorrar = new Button("Borrar");
         elementosFila.add(botonBorrar);
 
-
+        // Boton borrar dentro de la tarea
         botonBorrar.setOnAction(e ->{
                     Parent hbox = botonBorrar.getParent();
                     Parent vbox = botonBorrar.getParent().getParent();
@@ -49,12 +48,9 @@ public class AppController {
                     //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
                     ((VBox) vbox).getChildren().remove(hbox);
         });
-
-
-
+        // Boton modificar dentro de la propia tarea
         var botonModificar = new Button("Modificar");
         elementosFila.add(botonModificar);
-
         botonModificar.setOnAction(e ->{
             Parent hbox = botonModificar.getParent();
             var titulo2 = (Text) ((HBox) hbox).getChildren().get(0);
@@ -63,19 +59,57 @@ public class AppController {
             descEdit.setText(descripcion.getText());
             modificar.setVisible(true);
             entrada.setVisible(false);
+            vBoxTarea.setDisable(true);
             Text refModificarTitulo = titulo;
             Text refModDesc = desc;
-
         });
-
-
-
         elementosContenedor.add(fila);
 
 
     }
 
-    public void botonModificar(ActionEvent actionEvent) {
+    @FXML
+    protected void botonModificar() {
+
+        var fila = new HBox();
+        var elementosFila = fila.getChildren();
+        var titulo1 = new Text(tituloEdit.getText());
+        elementosFila.add(titulo1);
+        var descripcion1 = new Text(descEdit.getText());
+        elementosFila.add(descripcion1);
+        var elementosContenedor = vBoxTarea.getChildren();
+        elementosContenedor.add(fila);
+        fila.setSpacing(5);
+        var botonBorrar = new Button("Borrar");
+        elementosFila.add(botonBorrar);
+        var botonModificar = new Button("Modificar");
+        elementosFila.add(botonModificar);
+        modificar.setVisible(false);
+        entrada.setVisible(true);
+        vBoxTarea.setDisable(false);
+        botonBorrar.setOnAction(e ->{
+            Parent hbox = botonBorrar.getParent();
+            Parent vbox = botonBorrar.getParent().getParent();
+            var titulo2 = (Text) ((HBox)hbox).getChildren().get(0);
+            //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
+            ((VBox) vbox).getChildren().remove(hbox);
+        });
+
+        botonModificar.setOnAction(e ->{
+            Parent hbox = botonModificar.getParent();
+            var titulo2 = (Text) ((HBox) hbox).getChildren().get(0);
+            var desc = (Text) ((HBox) hbox).getChildren().get(1);
+            tituloEdit.setText(titulo1.getText());
+            descEdit.setText(descripcion1.getText());
+            modificar.setVisible(true);
+            entrada.setVisible(false);
+            vBoxTarea.setDisable(true);
+            Text refModificarTitulo = titulo1;
+            Text refModDesc = desc;
+
+        });
+
+
     }
 
 }
