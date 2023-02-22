@@ -1,6 +1,7 @@
 package com.example.tarea15febrero;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -9,7 +10,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-public class AppController {
+import java.net.URL;
+import java.util.Iterator;
+import java.util.ResourceBundle;
+
+public class AppController implements Initializable {
     @FXML
     private TextField nuevoTituloTarea;
     @FXML
@@ -55,10 +60,10 @@ public class AppController {
                     Parent vbox = botonBorrar.getParent().getParent();
                     var titulo2 = (Text) ((HBox)hbox).getChildren().get(0);
                     //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
+                    cajon.borrarTarea(titulo2.getText());
                     ((VBox) vbox).getChildren().remove(hbox);
-                    cajon.borrarTarea(titulo2);
-                    cajon.almacenar();
         });
+
         // Boton modificar dentro de la propia tarea
         var botonModificar = new Button("Modificar");
         elementosFila.add(botonModificar);
@@ -124,7 +129,7 @@ public class AppController {
             var titulo2 = (Text) ((HBox)hbox).getChildren().get(0);
             //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
             ((VBox) vbox).getChildren().remove(hbox);
-            cajon.borrarTarea(titulo2);
+            cajon.borrarTarea(titulo2.getText());
         });
 
         botonModificar.setOnAction(e ->{
@@ -148,4 +153,16 @@ public class AppController {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Iterator<String> iteradorTareas = cajon.DevolverIterador();
+
+        while (iteradorTareas.hasNext()){
+            String titulo = iteradorTareas.next();
+            String descripcion = cajon.DevolverDesc(titulo);
+
+
+        }
+
+    }
 }

@@ -1,9 +1,8 @@
 package com.example.tarea15febrero;
-
-import javafx.scene.text.Text;
-
 import java.io.*;
+import java.util.Iterator;
 import java.util.Properties;
+
 
 public class Modelo {
 
@@ -17,9 +16,10 @@ public class Modelo {
         lista = new Properties();
     }
 
-    public void borrarTarea(Text titulo) {
+    public void borrarTarea(String titulo) {
         lista.remove(titulo);
         almacenar();
+        System.out.println(lista);
     }
 
     public void modificarTarea(String titulo, String descripcion) {
@@ -48,40 +48,29 @@ public class Modelo {
     }
 
     // CARGAR DESPUES DE ALMACENAR
-    public boolean cargarTareasArchivo () throws IOException{
+    public boolean cargarTareasArchivo(){
+
+
         File archivo = new File(filepath);
         boolean existe = false;
         if ( archivo.exists() && archivo.isFile()){
-            fis = new FileInputStream(filepath);
-            lista.load(fis);
+            try {
+                fis = new FileInputStream(filepath);
+                lista.load(fis);
+                fis.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
             existe = true;
         } else System.out.println("¡NO HAY ARCHIVO DE TAREAS!");
         return existe;
     }
+    public String DevolverDesc (String titulo){
+        return (String) lista.get(titulo);
+    }
 
-    /*@Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-       try{
-            // Leemos las tareas del archivo
-            boolean hayTareas = lista.cargarTareasArchivo();
-            if (hayTareas){
-                Iterator<String> it = App.tareas.devuelveIteradorClaves();
-                //Recorremos el iterador de las claves para obtener los valores de ir creando filas con ambos valores
-                while (it.hasNext()) {
-                    String k = it.next();
-                    String d = App.tareas.getValor(k); //Gestion tarea modelo
-                    crearTarea(k, d); //Gestion tarea vista
-                }
-
-            }
-        } catch (IOException e){
-            throw new RuntimeException(e);
-        }
-
-}
-     */
-
-
-
+    public Iterator DevolverIterador(){
+        return lista.keySet().iterator();
+    }
 }
