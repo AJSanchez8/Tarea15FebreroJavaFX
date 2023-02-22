@@ -1,12 +1,9 @@
 package com.example.tarea15febrero;
 
-import javafx.fxml.Initializable;
+import javafx.scene.text.Text;
 
 import java.io.*;
-import java.net.URL;
-import java.util.Iterator;
 import java.util.Properties;
-import java.util.ResourceBundle;
 
 public class Modelo {
 
@@ -20,8 +17,9 @@ public class Modelo {
         lista = new Properties();
     }
 
-    public void borrarTarea(String titulo) {
+    public void borrarTarea(Text titulo) {
         lista.remove(titulo);
+        almacenar();
     }
 
     public void modificarTarea(String titulo, String descripcion) {
@@ -39,7 +37,7 @@ public class Modelo {
         }
     }
 
-    public void crearTarea(String titulo, String descripcion) {
+    public void meterTarea(String titulo, String descripcion) {
         lista.setProperty(titulo, descripcion);
         almacenar();
     }
@@ -48,6 +46,8 @@ public class Modelo {
     public String toString() {
         return "Modelo{tarea=" + lista + '}';
     }
+
+    // CARGAR DESPUES DE ALMACENAR
     public boolean cargarTareasArchivo () throws IOException{
         File archivo = new File(filepath);
         boolean existe = false;
