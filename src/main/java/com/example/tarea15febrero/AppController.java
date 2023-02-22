@@ -31,6 +31,7 @@ public class AppController {
     @FXML
     protected void botonCrear() {
 
+        cajon = new Modelo();
         var fila = new HBox();
         var elementosFila = fila.getChildren();
         var titulo = new Text(nuevoTituloTarea.getText());
@@ -40,8 +41,7 @@ public class AppController {
         elementosFila.add(descripcion);
         nuevoTituloTarea.clear();
         nuevaDescripcionTarea.clear();
-       // cajon.crearTarea(titulo.getText(),descripcion.getText());
-       // cajon.almacenar();
+        cajon.crearTarea(titulo.getText(),descripcion.getText());
         var elementosContenedor = vBoxTarea.getChildren();
         fila.setSpacing(5);
         var botonBorrar = new Button("Borrar");

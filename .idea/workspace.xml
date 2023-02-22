@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d24ca2-8699-4614-a6b3-05ac056cd5e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/memorycard.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/Modelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/memorycard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/memorycard.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Antonio José Sánchez &lt;120746317+ajsanchez8@users.noreply.github.com&gt;" />
         <option value="AJSanchez" />
       </list>
     </option>
@@ -55,19 +55,22 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2LljWr6HOEnT7NfDHDgnjJqDm9h" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/usuario/AJDAW/programacion/proyectos intelliJ/Tarea15Febrero"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/usuario/AJDAW/programacion/proyectos intelliJ/Tarea15Febrero&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero" />
@@ -124,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676889490052</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ultimo commit 20 Febrero, modificar añadir totalmente funcionales, añadimos el archivo memorycard.txt para guardar los datos.">
+      <created>1676895887620</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676895887620</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +155,7 @@
     <MESSAGE value="Boton modificar funcional 100%" />
     <MESSAGE value="Creamos properties para almacenar datos" />
     <MESSAGE value="Creamos properties y lo implementamos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creamos properties y lo implementamos" />
+    <MESSAGE value="Ultimo commit 20 Febrero, modificar añadir totalmente funcionales, añadimos el archivo memorycard.txt para guardar los datos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ultimo commit 20 Febrero, modificar añadir totalmente funcionales, añadimos el archivo memorycard.txt para guardar los datos." />
   </component>
 </project>

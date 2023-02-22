@@ -19,9 +19,6 @@ public class App extends Application {
         stage.setTitle("LISTA DE TAREAS");
         stage.setScene(scene);
         stage.show();
-
-
-
     }
 
     public static void main(String[] args) {

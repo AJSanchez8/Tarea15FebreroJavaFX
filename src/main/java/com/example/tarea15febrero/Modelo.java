@@ -4,10 +4,11 @@ import javafx.fxml.Initializable;
 
 import java.io.*;
 import java.net.URL;
+import java.util.Iterator;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
-public class Modelo implements Initializable {
+public class Modelo {
 
     private FileOutputStream fos;
     private FileInputStream fis;
@@ -17,10 +18,6 @@ public class Modelo implements Initializable {
     //Contructor tarea
     public Modelo() {
         lista = new Properties();
-    }
-
-    public void crearTarea(String titulo, String descripcion) {
-        lista.setProperty(titulo, descripcion);
     }
 
     public void borrarTarea(String titulo) {
@@ -42,6 +39,11 @@ public class Modelo implements Initializable {
         }
     }
 
+    public void crearTarea(String titulo, String descripcion) {
+        lista.setProperty(titulo, descripcion);
+        almacenar();
+    }
+
     @Override
     public String toString() {
         return "Modelo{tarea=" + lista + '}';
@@ -57,15 +59,14 @@ public class Modelo implements Initializable {
         return existe;
     }
 
-    @Override
+    /*@Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        /*
+
        try{
             // Leemos las tareas del archivo
-            boolean hayTareas = App.tareas.cargarTareasArchivo();
+            boolean hayTareas = lista.cargarTareasArchivo();
             if (hayTareas){
                 Iterator<String> it = App.tareas.devuelveIteradorClaves();
-
                 //Recorremos el iterador de las claves para obtener los valores de ir creando filas con ambos valores
                 while (it.hasNext()) {
                     String k = it.next();
@@ -78,7 +79,9 @@ public class Modelo implements Initializable {
             throw new RuntimeException(e);
         }
 
-         */
+}
+     */
 
-    }
+
+
 }
