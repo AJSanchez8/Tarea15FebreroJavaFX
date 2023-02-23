@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 import java.net.URL;
 import java.util.Iterator;
@@ -29,65 +30,86 @@ public class AppController implements Initializable {
     private TextField tituloEdit;
 
     @FXML
+    private Text mensaje;
+    @FXML
+    private TextFlow informacion;
+    @FXML
     private TextArea descEdit;
 
     private  Modelo cajon = new Modelo();
     @FXML
     protected void botonCrear() {
+        var clases = informacion.getStyleClass();
 
-        //Declaramos variables
-        var fila = new HBox();
-        var elementosFila = fila.getChildren();
+        if(nuevoTituloTarea.getText().equals("") || nuevaDescripcionTarea.getText().equals("")){
 
-        //Titulo
-        var titulo = new Text(nuevoTituloTarea.getText());
-        elementosFila.add(titulo);
+            // Mostramos mensaje
+            clases.remove(1);
+            clases.add("alert-danger");
+            mostrarMensaje("Tarea NO creada, CAMPOS VACIOS");
+        } else {
+            //Declaramos variables
+            var fila = new HBox();
+            var elementosFila = fila.getChildren();
 
-        //Descripcion
-        var descripcion = new Text(nuevaDescripcionTarea.getText());
-        elementosFila.add(descripcion);
+            //Titulo
+            var titulo = new Text(nuevoTituloTarea.getText());
+            elementosFila.add(titulo);
 
-        nuevoTituloTarea.clear();
-        nuevaDescripcionTarea.clear();
-        var elementosContenedor = vBoxTarea.getChildren();
-        fila.setSpacing(5);
-        var botonBorrar = new Button("Borrar");
-        elementosFila.add(botonBorrar);
+            //Descripcion
+            var descripcion = new Text(nuevaDescripcionTarea.getText());
+            elementosFila.add(descripcion);
 
-        // Boton borrar dentro de la tarea
-        botonBorrar.setOnAction(e ->{
-                    Parent hbox = botonBorrar.getParent();
-                    Parent vbox = botonBorrar.getParent().getParent();
-                    var titulo2 = (Text) ((HBox)hbox).getChildren().get(0);
-                    //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
-                    cajon.borrarTarea(titulo2.getText());
-                    ((VBox) vbox).getChildren().remove(hbox);
-        });
+            nuevoTituloTarea.clear();
+            nuevaDescripcionTarea.clear();
+            var elementosContenedor = vBoxTarea.getChildren();
+            fila.setSpacing(5);
+            var botonBorrar = new Button("Borrar");
+            elementosFila.add(botonBorrar);
+            botonBorrar.getStyleClass().setAll("btn", "btn-danger");
 
-        // Boton modificar dentro de la propia tarea
-        var botonModificar = new Button("Modificar");
-        elementosFila.add(botonModificar);
-        botonModificar.setOnAction(e ->{
-            Parent hbox = botonModificar.getParent();
-            var titulo2 = (Text) ((HBox) hbox).getChildren().get(0);
-            var desc = (Text) ((HBox) hbox).getChildren().get(1);
-            tituloEdit.setText(titulo.getText());
-            descEdit.setText(descripcion.getText());
-            modificar.setVisible(true);
-            entrada.setVisible(false);
-            vBoxTarea.setDisable(true);
-            Text refModificarTitulo = titulo;
-            Text refModDesc = desc;
-            // Borramos la tarea, se queda el texto anterior en la modificacion para no perderla
-            Parent hbox1 = botonBorrar.getParent();
-            Parent vbox = botonBorrar.getParent().getParent();
-            var titulo3 = (Text) ((HBox)hbox1).getChildren().get(0);
-            //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
-            ((VBox) vbox).getChildren().remove(hbox1);
-        });
-        elementosContenedor.add(fila);
-        cajon.meterTarea(titulo.getText(),descripcion.getText());
-        cajon.almacenar();
+            // Boton borrar dentro de la tarea
+            botonBorrar.setOnAction(e -> {
+                Parent hbox = botonBorrar.getParent();
+                Parent vbox = botonBorrar.getParent().getParent();
+                var titulo2 = (Text) ((HBox) hbox).getChildren().get(0);
+                //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
+                cajon.borrarTarea(titulo2.getText());
+                ((VBox) vbox).getChildren().remove(hbox);
+                clases.remove(1);
+                clases.add("alert-warning");
+                mostrarMensaje("Tarea "+titulo.getText()+" borrada");
+            });
+
+            // Boton modificar dentro de la propia tarea
+            var botonModificar = new Button("Modificar");
+            elementosFila.add(botonModificar);
+            botonModificar.getStyleClass().setAll("btn", "btn-info");
+            botonModificar.setOnAction(e -> {
+                Parent hbox = botonModificar.getParent();
+                var titulo2 = (Text) ((HBox) hbox).getChildren().get(0);
+                var desc = (Text) ((HBox) hbox).getChildren().get(1);
+                tituloEdit.setText(titulo.getText());
+                descEdit.setText(descripcion.getText());
+                modificar.setVisible(true);
+                entrada.setVisible(false);
+                vBoxTarea.setDisable(true);
+                Text refModificarTitulo = titulo;
+                Text refModDesc = desc;
+                // Borramos la tarea, se queda el texto anterior en la modificacion para no perderla
+                Parent hbox1 = botonBorrar.getParent();
+                Parent vbox = botonBorrar.getParent().getParent();
+                var titulo3 = (Text) ((HBox) hbox1).getChildren().get(0);
+                //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
+                ((VBox) vbox).getChildren().remove(hbox1);
+            });
+            elementosContenedor.add(fila);
+            cajon.meterTarea(titulo.getText(), descripcion.getText());
+            cajon.almacenar();
+            clases.remove(1);
+            clases.add("alert-success");
+            mostrarMensaje("Tarea "+titulo.getText()+" añadida");
+        }
     }
 
     @FXML
@@ -111,8 +133,10 @@ public class AppController implements Initializable {
         //Añadimos botones
         var botonBorrar = new Button("Borrar");
         elementosFila.add(botonBorrar);
+        botonBorrar.getStyleClass().setAll("btn", "btn-danger");
         var botonModificar = new Button("Modificar");
         elementosFila.add(botonModificar);
+        botonModificar.getStyleClass().setAll("btn","btn-info");
 
         //Guardamos en el properties
         cajon.meterTarea(titulo1.getText(),descripcion1.getText());
@@ -163,6 +187,17 @@ public class AppController implements Initializable {
 
 
         }
+
+    }
+
+    public void ocultar(){
+        informacion.setVisible(false);
+    }
+    public void mostrarMensaje (String msj){
+        mensaje.setText("Mensaje: "+msj);
+        informacion.setVisible(true);
+
+        // Llamamos al servicio
 
     }
 }

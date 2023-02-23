@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="55d24ca2-8699-4614-a6b3-05ac056cd5e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/memorycard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/memorycard.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677056442295</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Proceso de cargar metodos anteriores">
+      <created>1677058210997</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1677058210997</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +182,17 @@
     <MESSAGE value="Ultimo commit 20 Febrero, modificar añadir totalmente funcionales, añadimos el archivo memorycard.txt para guardar los datos." />
     <MESSAGE value="Guarda datos pero solo el ultimo proporcionado" />
     <MESSAGE value="Guarda todos los datos falta borrarlos y cargar anteriores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Guarda todos los datos falta borrarlos y cargar anteriores" />
+    <MESSAGE value="Proceso de cargar metodos anteriores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proceso de cargar metodos anteriores" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
