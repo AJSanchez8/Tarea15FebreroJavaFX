@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55d24ca2-8699-4614-a6b3-05ac056cd5e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tarea15febrero/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/VentanaCrear.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/memorycard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/tarea15febrero/memorycard.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677058210997</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Cambio de colores y mensajes">
+      <created>1677139357817</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1677139357817</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,7 +188,8 @@
     <MESSAGE value="Guarda datos pero solo el ultimo proporcionado" />
     <MESSAGE value="Guarda todos los datos falta borrarlos y cargar anteriores" />
     <MESSAGE value="Proceso de cargar metodos anteriores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proceso de cargar metodos anteriores" />
+    <MESSAGE value="Cambio de colores y mensajes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio de colores y mensajes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

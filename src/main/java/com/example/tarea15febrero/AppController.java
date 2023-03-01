@@ -79,6 +79,7 @@ public class AppController implements Initializable {
                 clases.remove(1);
                 clases.add("alert-warning");
                 mostrarMensaje("Tarea "+titulo.getText()+" borrada");
+                cajon.almacenar();
             });
 
             // Boton modificar dentro de la propia tarea
@@ -154,6 +155,7 @@ public class AppController implements Initializable {
             //Tambien podemos crear una variable y castearla y abajo solo ponemos vbox. y el metodo
             ((VBox) vbox).getChildren().remove(hbox);
             cajon.borrarTarea(titulo2.getText());
+            cajon.almacenar();
         });
 
         botonModificar.setOnAction(e ->{

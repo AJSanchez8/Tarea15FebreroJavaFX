@@ -1,3 +1,4 @@
 #Tareas pendientes
-#Thu Feb 23 09:00:43 CET 2023
-wewewe=wewewe
+#Wed Mar 01 08:15:54 CET 2023
+3434=3434
+oalasd=moaskd
