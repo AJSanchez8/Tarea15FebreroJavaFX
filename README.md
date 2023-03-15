@@ -1,6 +1,6 @@
 # Tarea15FebreroJavaFX
 Pequeña app de una lista de tareas
-en la que se añade y eliminan tareas
-, falta modificar unas cosas para que funcione el boton modificar
+en la que se añade y eliminan tareas,
+conectado con una base de datos en el puerto 8081
 
 *** WORK IN PROGRESS ***
